@@ -1,0 +1,39 @@
+body {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  padding: 100px 30px;
+}
+
+h1 {
+  color: #ee936e;
+  font-family: "Roboto", sans-serif;
+}
+
+p,
+p3,
+p2 {
+  color: #53514e;
+  font-family: "Roboto", sans-serif;
+}
+
+p2 {
+  margin: 50px 0;
+  font-size: 20px;
+}
+
+form {
+  text-align: center;
+  padding: 20px 15px;
+  font-size: 20px;
+}
+
+.maincard {
+  background-image: linear-gradient(to bottom, #ffecd2b4 0%, #fcb69fa4 100%);
+}
+
+.weathercard {
+  padding: 20px 5px;
+  background-color: #ffebd1;
+  background-image: linear-gradient(to bottom, #ffecd2 0%, #fcb69f 100%);
+}
