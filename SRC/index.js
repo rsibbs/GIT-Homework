@@ -1,4 +1,4 @@
-// Feature 1
+// Date & Time Functions
 
 function formatDate(date) {
   let hours = date.getHours();
@@ -28,12 +28,24 @@ let dateElement = document.querySelector("#current-date");
 let currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);
 
-// Week 5 Homework
+// Temperature Functions
 
 function displayTemperature(response) {
+console.log(response.data);
+
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#main-temp").innerHTML =
     Math.round(response.data.main.temp) + "ºC";
+
+  let humidityElement = document.querySelector("#humidity");
+  humidityElement.innerHTML =response.data.main.humidity;
+
+  let precipitationElement = document.querySelector("#precipitation");
+  precipitationElement.innerHTML = response.data.main.precipitation;
+
+  let windElement = document.querySelector("#wind");
+  windElement.innerHTML = Math.round (response.data.wind.speed);
+
 }
 
 function search(event) {
