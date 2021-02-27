@@ -52,4 +52,6 @@ a:link {
 ul {
   list-style-type: none;
   text-align: right;
+  font-family: "Roboto", sans-serif;
+  text-transform: capitalize;
 }

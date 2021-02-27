@@ -31,17 +31,16 @@ dateElement.innerHTML = formatDate(currentTime);
 // Temperature Functions
 
 function displayTemperature(response) {
-console.log(response.data);
-
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#main-temp").innerHTML =
     Math.round(response.data.main.temp) + "ºC";
 
+  
+  let descriptionElement = document.querySelector("#description");
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  
   let humidityElement = document.querySelector("#humidity");
   humidityElement.innerHTML =response.data.main.humidity;
-
-  let precipitationElement = document.querySelector("#precipitation");
-  precipitationElement.innerHTML = response.data.main.precipitation;
 
   let windElement = document.querySelector("#wind");
   windElement.innerHTML = Math.round (response.data.wind.speed);
