@@ -43,3 +43,7 @@ form {
   position: relative;
   top: -16px;
 }
+
+a:link {
+  text-decoration: none;
+}
