@@ -37,3 +37,9 @@ form {
   background-color: #ffebd1;
   background-image: linear-gradient(to bottom, #ffecd2 0%, #fcb69f 100%);
 }
+
+.current-temp strong {
+  font-size: 15px;
+  position: relative;
+  top: -16px;
+}
