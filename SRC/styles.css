@@ -53,5 +53,8 @@ ul {
   list-style-type: none;
   text-align: right;
   font-family: "Roboto", sans-serif;
+}
+
+li:first-letter {
   text-transform: capitalize;
 }
