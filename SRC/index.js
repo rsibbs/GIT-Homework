@@ -62,8 +62,8 @@ function search(event) {
 function displayFahrenheitTemperature(event){
   event.preventDefault();
   let fahrenheitTemperature = (celsiusTemperature*9)/5+2; 
-  alert(fahrenheitTemperature);
-  //fahrenheitTemperature.innerHTML = Math.round(fahrenheitTemperature);
+  let mainTemperature = document.querySelector("#main-number");
+  mainTemperature.innerHTML = Math.round(fahrenheitTemperature);
 }
 
 let celsiusTemperature = null;
