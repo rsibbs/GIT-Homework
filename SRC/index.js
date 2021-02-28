@@ -35,7 +35,7 @@ function displayTemperature(response) {
   document.querySelector("#main-number").innerHTML =
     Math.round(response.data.main.temp);
 
-    celsiusTemperature = response.data.main.temp;
+  celsiusTemperature = response.data.main.temp;
 
   let descriptionElement = document.querySelector("#description");
   descriptionElement.innerHTML = response.data.weather[0].description;
@@ -62,7 +62,8 @@ function search(event) {
 function displayFahrenheitTemperature(event){
   event.preventDefault();
   let fahrenheitTemperature = (celsiusTemperature*9)/5+2; 
-  fahrenheitTemperature.innerHTML = Math.round(fahrenheitTemperature);
+  alert(fahrenheitTemperature);
+  //fahrenheitTemperature.innerHTML = Math.round(fahrenheitTemperature);
 }
 
 let celsiusTemperature = null;
