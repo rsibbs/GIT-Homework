@@ -30,8 +30,8 @@
                             <p3 id="current-date"> Sunday <br /> 4:00 pm </p3>
                         </div>
                         <div class="col-4">
-                            <h1 id="main-temp" class = "current-temp"> 2 <strong> ºC | <a href = "#"> ºF </a> 
-                                <br /> <img src="http://openweathermap.org/img/wn/10d@2x.png" id="main-icon"></strong> </h1> <br /> 
+                            <h1 id="main-temp" class = "current-temp"> <span id = "main-number"> 2 </span><strong> ºC | <a href = "#" id = "fahrenheit-link"> ºF </a> 
+                                <br /> <img src="" id="main-icon"></strong> </h1> <br /> 
                         
                         </div>
                         <div class="col-4">
@@ -99,7 +99,7 @@
                                 <input type="text" placeholder="Enter city name" autofocus="on" autocomplete="off"
                                     id="city-input" />
 
-                                <input type="submit" value="search" />
+                                <input type="submit" value="search" class = "btn btn-search" />
                                 <input type="submit" value="current" />
 
                             </form>
