@@ -52,12 +52,23 @@ function displayTemperature(response) {
 
 }
 
+// Temperature function for the Forecast
+function displayForecast(response){
+  console.log(response.data);
+
+}
+
+
 
 function search(city){
   let units = "metric";
   let apiKey = "b0bc2c913d7afe71d0022b225acfb5b8";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(displayTemperature);
+
+
+  apiUrl = `api.openweathermap.org/data/2.5/forecast?q= ${city}&appid=${apiKey}&units=${units}`; 
+  axios.get(apiUrl).then(displayForecast);
 }
 
 
