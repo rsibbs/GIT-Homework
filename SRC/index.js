@@ -54,7 +54,60 @@ function displayTemperature(response) {
 
 // Temperature function for the Forecast
 function displayForecast(response){
-  console.log(response.data);
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = `
+  <div class="col-2">
+    <p2> 
+    
+    <div class = "weather-forecast-temperature">
+    <strong> 3º</strong> 3º
+    </div>
+
+     <br /> 
+
+    <img
+      src = ""
+      alt = ""
+      />
+    
+    <br /> 
+    
+    Monday 
+    
+    <p2>
+    </div>
+  
+  
+  
+  
+  
+  
+  
+  `
+
+//  <div class="col-1">
+               // </div>
+
+                
+
+               // <div class="col-2">
+                  //  <p2> <strong> 1º </strong> 3º<br /> 🌧 <br /> Tuesday <p2>
+             //   </div>
+
+              //  <div class="col-2">
+                 //   <p2> <strong> 3º </strong> 3º <br /> ⛅️ <br /> Wednesday <p2>
+               // </div>
+
+               // <div class="col-2">
+                 //   <p2> <strong> 4º </strong> 3º<br /> 🌤 <br /> Thursday <p2>
+               // </div>
+
+              //  <div class="col-2">
+               //     <p2> <strong> 4º </strong> 3º <br /> ☁️ <br /> Friday <p2>
+            //    </div>
+
+              //  <div class="col-1">
+             //   </div>
 
 }
 
