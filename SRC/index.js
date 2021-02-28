@@ -28,7 +28,7 @@ let dateElement = document.querySelector("#current-date");
 let currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);
 
-// Temperature Functions
+// Temperature Function for Search Button
 
 function displayTemperature(response) {
   document.querySelector("#city").innerHTML = response.data.name;
@@ -37,6 +37,10 @@ function displayTemperature(response) {
 
   celsiusTemperature = response.data.main.temp;
 
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute = ("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  iconElement.setAttribute = ("alt", response.data.weather[0].description);
+  
   let descriptionElement = document.querySelector("#description");
   descriptionElement.innerHTML = response.data.weather[0].description;
   
@@ -48,6 +52,7 @@ function displayTemperature(response) {
 
 }
 
+
 function search(event) {
   event.preventDefault();
   let city = document.querySelector("#city-input").value;
@@ -56,6 +61,7 @@ function search(event) {
   let apiKey = "b0bc2c913d7afe71d0022b225acfb5b8";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(displayTemperature);
+
 }
 
 
