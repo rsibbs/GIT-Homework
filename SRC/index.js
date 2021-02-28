@@ -34,6 +34,11 @@ function displayTemperature(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#main-temp").innerHTML =
     Math.round(response.data.main.temp) + "ºC";
+  
+  let mainiconElement = document.querySelector("#main-icon");
+  mainiconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+
+
 
   
   let descriptionElement = document.querySelector("#description");
