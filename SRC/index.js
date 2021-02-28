@@ -31,6 +31,7 @@ dateElement.innerHTML = formatDate(currentTime);
 // Temperature Function for Search Button
 
 function displayTemperature(response) {
+
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#main-number").innerHTML =
     Math.round(response.data.main.temp);
@@ -40,7 +41,7 @@ function displayTemperature(response) {
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute = ("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   iconElement.setAttribute = ("alt", response.data.weather[0].description);
-  
+
   let descriptionElement = document.querySelector("#description");
   descriptionElement.innerHTML = response.data.weather[0].description;
   
@@ -53,15 +54,18 @@ function displayTemperature(response) {
 }
 
 
-function search(event) {
-  event.preventDefault();
-  let city = document.querySelector("#city-input").value;
-
+function search(city){
   let units = "metric";
   let apiKey = "b0bc2c913d7afe71d0022b225acfb5b8";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(displayTemperature);
+}
 
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search (cityInputElement.value);
 }
 
 
@@ -76,8 +80,10 @@ let celsiusTemperature = null;
 
 
 let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", search);
+searchForm.addEventListener("submit", handleSubmit);
 
 
 let fahrenheitlink = document.querySelector("#fahrenheit-link");
 fahrenheitlink.addEventListener("click", displayFahrenheitTemperature);
+
+search("Toronto");
